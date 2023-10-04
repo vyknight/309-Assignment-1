@@ -23,13 +23,24 @@
                 <a href="mailto:mz.liu@mail.mail.utoronto.ca?subject=Bug%20Found&body=I%20found%20the%20following%20bug%20on%20your%20website%3A%0D%0A%0D%0A">
                     <div class="email">mz.liu@mail.utoronto.ca</div>
                 </a>
-                <form>
-                    <label for="email-input">Your Email:</label>
-                    <input type="email" id="email-input" name="email-input">
-                    <br>
-                    <label for="feedback-box">Feedback:</label>
-                    <input type="text" id="feedback-box"
-                </form>
+                <div class="form-container">
+                    <form action="http://postman-echo.com/post" method="POST">
+                        <label for="email-input">Your Email:</label>
+                        <input type="email" id="email-input" name="email" required><br>
+                        
+                        <label for="feedback-box">Feedback:</label>
+                        <input type="textarea" id="feedback-box" name="feedback" required><br>
+
+                        <label for="file-attachment">Attachment:</label>
+                        <input type="file" id="file-attachment" name="attachments" required><br>
+
+                        <input type="checkbox" id="checkbox" name="consent" value="yes" required>
+                        <label for="checkbox">You agree to receive emails from me</label><br>
+
+                        <input type="submit" value="Submit" class="submit-button">
+                    </form>
+                </div>
+                
             </div>
         </div>
         <footer>
