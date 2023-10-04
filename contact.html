@@ -25,25 +25,38 @@
                 </a>
                 <div class="form-container">
                     <form action="http://postman-echo.com/post" method="POST">
-                        <label for="email-input">Your Email:</label>
-                        <input type="email" id="email-input" name="email" required><br>
+                        <div id="email-container" class="form-item-container">
+                            <label for="email-input">Your Email:</label>
+                            <input type="email" id="email-input" name="email" required><br>
+                        </div>
                         
-                        <label for="feedback-box">Feedback:</label>
-                        <input type="textarea" id="feedback-box" name="feedback" required><br>
-
-                        <label for="file-attachment">Attachment:</label>
-                        <input type="file" id="file-attachment" name="attachments" required><br>
-
-                        <input type="checkbox" id="checkbox" name="consent" value="yes" required>
-                        <label for="checkbox">You agree to receive emails from me</label><br>
-
-                        <input type="submit" value="Submit" class="submit-button">
+                        <div id="feedback-container" class="form-item-container">
+                            <label for="feedback-box">Feedback:</label>
+                            <input type="textarea" id="feedback-box" name="feedback" required><br>
+                        </div>
+                        
+                        <div id="attachment-container" class="form-item-container">
+                            <label for="file-attachment">Attachment:</label>
+                            <div id="file-input-box">
+                                <input type="file" id="file-attachment" name="attachments" required><br>
+                            </div>
+                        </div>
+                        
+                        <div id="checkbox-container" class="form-item-container">
+                            <input type="checkbox" id="checkbox" name="consent" value="yes" required>
+                            <label for="checkbox">You agree to receive emails from me</label><br>
+                        </div>
+                        
+                        <div id="submit-container" class="form-item-container">
+                            <input type="submit" value="Send Feedback" class="submit-button">
+                        </div>
+                        
                     </form>
                 </div>
                 
             </div>
         </div>
-        <footer>
+        <footer class="relative">
             <p class="footer-text">Copyright 2023 by liuzeku4</p>
         </footer>
     </div>  
