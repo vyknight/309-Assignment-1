@@ -9,30 +9,37 @@
 
 <body>
     <div class="page-container">
-        <header>
-            <span>
-                <a href="./index.html"><p class="navlink inline" >Home</p></a>
-                <a href="./about.html"><p class="navlink inline current">About</p></a>
-                <a href="./contact.html"><p class="navlink inline">Contact</p></a>
-            </span>
-        </header>
         <div class="content-wrap">
-            <div class="main">
-                <h2>About me</h2>
+            <header>
+                <ul class="nav">
+                    <li><a href="./index.html" class="navlink home">Home</a></li>
+                    <li><a href="./about.html" class="navlink current">About</a></li>
+                    <li><a href="./contact.html" class="navlink ">Contact</a></li>
+                </ul>
+            </header>
+            <div class="main" id="about-main">
+                <h1>About me</h1>
                 <details>
                     <summary>I'm currently taking the following classes:</summary>
-                    <ul>
+                    <ul class="class-list">
                         <li>CSC301</li>
                         <li>CSC309</li>
                         <li>CSC384</li>
                     </ul>
                 </details>
                 <p class="small-text">I have read and understood the University of Toronto's Code of Behaviours on Academic Matters.</p>
-                <embed src="https://www.cs.toronto.edu/~sunk/Code_of_Behaviour_on_Academic_Matters_July_1_2019.pdf" type="application/pdf">
+                <object 
+                    id="pdf" 
+                    data="http://www.cs.toronto.edu/~sunk/Code_of_Behaviour_on_Academic_Matters_July_1_2019.pdf"
+                    type="application/pdf"
+                >
+                    No pdf
+                </object>
             </div>
         </div>
+        <!-- <footer class="relative"> -->
         <footer class="relative">
-            <p class="footer-text">Copyright 2023 by liuzeku4</p>
+            <p class="footer-text">Copyright 2023 by liuzeku4.</p>
         </footer>
     </div>  
 </body>

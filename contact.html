@@ -9,55 +9,54 @@
 
 <body>
     <div class="page-container">
-        <header>
-            <span>
-                <a href="./index.html"><p class="navlink inline" >Home</p></a>
-                <a href="./about.html"><p class="navlink inline">About</p></a>
-                <a href="./contact.html"><p class="navlink inline current">Contact</p></a>
-            </span>
-        </header>
         <div class="content-wrap">
+            <header>
+                <ul class="nav">
+                    <li><a href="./index.html" class="navlink home">Home</a></li>
+                    <li><a href="./about.html" class="navlink">About</a></li>
+                    <li><a href="./contact.html" class="navlink current">Contact</a></li>
+                </ul>
+            </header>
             <div class="main">
-                <image src="amoeba-square-600.jpg" class="portrait"/>
+                <div id="portrait-frame">
+                    <image src="amoeba-square-600.jpg" class="portrait"/>
+                </div>
                 <h1>Matthew Liu</h1>
-                <a href="mailto:mz.liu@mail.mail.utoronto.ca?subject=Bug%20Found&body=I%20found%20the%20following%20bug%20on%20your%20website%3A%0D%0A%0D%0A">
-                    <div class="email">mz.liu@mail.utoronto.ca</div>
+                <a class="email" href="mailto:mz.liu@mail.utoronto.ca?subject=Bug%20Found&body=I%20found%20the%20following%20bug%20on%20your%20website%3A%0A%0A">
+                    mz.liu@mail.utoronto.ca
                 </a>
                 <div class="form-container">
-                    <form action="http://postman-echo.com/post" method="POST">
-                        <div id="email-container" class="form-item-container">
-                            <label for="email-input">Your Email:</label>
-                            <input type="email" id="email-input" name="email" required><br>
+                    <form action="https://postman-echo.com/post" method="POST" enctype="multipart/form-data">
+                        <label class="label" for="email-input">Your Email:</label>
+                        <input class="input" type="email" id="email-input" name="email" required/>
+
+                        <label class="label" for="feedback-box">Feedback:</label>
+                        <textarea class="input" type="text" id="feedback-box" name="feedback" rows=4 placeholder="Enter your feedback here" required></textarea>
+
+                        <label class="label" for="file-attachment">Attachment:</label>
+                        <input class="input" type="file" id="file-attachment" name="attachments" required>
+
+                        <div id="attachment-checkbox-spacer"></div>
+                        <div id="attachment-checkbox-spacer"></div>
+
+                        <div id="checkbox-box">
+                            <input class="input" type="checkbox" id="checkbox" name="consent" value="yes" required>
                         </div>
-                        
-                        <div id="feedback-container" class="form-item-container">
-                            <label for="feedback-box">Feedback:</label>
-                            <input type="textarea" id="feedback-box" name="feedback" required><br>
-                        </div>
-                        
-                        <div id="attachment-container" class="form-item-container">
-                            <label for="file-attachment">Attachment:</label>
-                            <div id="file-input-box">
-                                <input type="file" id="file-attachment" name="attachments" required><br>
-                            </div>
-                        </div>
-                        
-                        <div id="checkbox-container" class="form-item-container">
-                            <input type="checkbox" id="checkbox" name="consent" value="yes" required>
-                            <label for="checkbox">You agree to receive emails from me</label><br>
-                        </div>
-                        
-                        <div id="submit-container" class="form-item-container">
-                            <input type="submit" value="Send Feedback" class="submit-button">
-                        </div>
-                        
+                        <label class="checkbox-label" for="checkbox">You agree to receive emails from me</label>
+
+                        <div id="checkbox-submit-spacer"></div>
+                        <div id="checkbox-submit-spacer"></div>
+
+                        <div></div> <!--since it's grid-->
+                        <input class="input" type="submit" value="Send Feedback" id="submit-button">
                     </form>
                 </div>
                 
             </div>
         </div>
+        <!-- <footer class="relative"> -->
         <footer class="relative">
-            <p class="footer-text">Copyright 2023 by liuzeku4</p>
+            <p class="footer-text">Copyright 2023 by liuzeku4.</p>
         </footer>
     </div>  
 </body>
